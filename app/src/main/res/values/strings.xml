@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Proyecto_PDM</string>
+    <string name="app_dash_hazQueTu"> "Haz que tu</string>
+    <string name="app_dash_comidaCuente">comida cuente"</string>
+    <string name="app_dash_donarAlimento">Donar \n alimento</string>
+    <string name="app_dash_recibirAlimento">Recibir \n alimento</string>
+    <string name="app_dash_aQuienes">¿A quiénes \n Ayudamos?</string>
+    <string name="title_activity__donar">Activity_Donar</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+</resources>
