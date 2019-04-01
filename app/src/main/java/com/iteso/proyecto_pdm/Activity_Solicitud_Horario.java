@@ -1,4 +1,14 @@
 package com.iteso.proyecto_pdm;
 
-public class Activity_Horario {
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
+
+public class Activity_Solicitud_Horario extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_solicitud_horario);
+    }
 }

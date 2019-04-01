@@ -26,6 +26,9 @@
         <activity android:name=".Activity_queSoy" />
         <activity android:name=".RegistroDonador2" />
         <activity android:name=".RegistroDonador3" />
+        <activity android:name=".Activity_Solicitud_Alimento" />
+        <activity android:name=".Activity_Solicitud_Horario" />
+        <activity android:name=".Activity_Categorias" />
     </application>
 
 </manifest>
