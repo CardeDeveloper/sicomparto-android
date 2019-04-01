@@ -40,4 +40,23 @@
     <string name="title_activity_registro_donador_nombre">Nombre de responsable</string>
     <string name="title_activity_facturacion">Datos de Facturacion</string>
 
+    <string name="title_solicitud">Solicitud</string>
+    <string name="title_categoria">Elige categoria</string>
+    <string name="verdura">Verdura</string>
+    <string name="lacteos">Lácteos</string>
+    <string name="cereales">Cereales</string>
+    <string name="carnes_rojas">Carnes Rojas</string>
+    <string name="carnes_blancas">Carnes Blancas</string>
+    <string name="comida_rapida">Cómida rápida</string>
+    <string name="mermelada_cremas">Mermelada/Cremas</string>
+    <string name="condimentos">Condimentos</string>
+    <string name="cafe">Café</string>
+    <string name="pasteles">Pasteles</string>
+    <string name="enlatados">Enlatados</string>
+    <string name="agua">Agua</string>
+    <string name="dulces">Dulces</string>
+    <string name="jugos">Jugos</string>
+    <string name="leguminosas">Leguminosas</string>
+    <string name="procesados">Alimento procesado</string>
+
 </resources>
