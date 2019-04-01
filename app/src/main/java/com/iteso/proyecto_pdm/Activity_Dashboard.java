@@ -27,7 +27,8 @@ public class Activity_Dashboard extends AppCompatActivity {
         recibir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(Activity_Dashboard.this, Activity_Solicitud_Alimento.class);
+                startActivity(intent);
             }
         });
 
