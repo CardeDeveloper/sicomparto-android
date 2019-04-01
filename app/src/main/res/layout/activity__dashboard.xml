@@ -5,7 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity_Dashboard">
+    tools:context=".Activity_Dashboard"
+    android:background="#FBFBFB"
+    android:padding="10dp">
 
     <TextView
         android:layout_width="wrap_content"
@@ -16,7 +18,8 @@
         android:layout_marginBottom="-46dp"
         android:text="@string/app_dash_hazQueTu"
         android:textSize="30sp"
-        android:textColor="@color/colorYoSiDOno"/>
+        android:textColor="#026B3C"
+        android:textStyle="bold"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -27,7 +30,7 @@
         android:layout_marginBottom="-46dp"
         android:text="@string/app_dash_comidaCuente"
         android:textSize="23sp"
-        android:textColor="@color/colorYoSiDOno"/>
+        android:textColor="#026B3C"/>
 
     <Button
         android:id="@+id/activity_dashboard_donar"
@@ -36,8 +39,11 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="132dp"
-        android:drawableLeft="@mipmap/ic_launcher_round"
-        android:text="@string/app_dash_donarAlimento" />
+        android:drawableLeft="@mipmap/donar_foreground"
+        android:text="@string/app_dash_donarAlimento"
+        android:background="@android:color/white"
+        android:textColor="#2ADA8C"
+        android:layout_marginBottom="10dp"/>
 
     <Button
         android:id="@+id/activity_dashboard_recibir"
@@ -45,9 +51,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="244dp"
-        android:drawableLeft="@mipmap/ic_launcher_round"
-        android:text="@string/app_dash_recibirAlimento" />
+        android:layout_marginTop="260dp"
+        android:drawableLeft="@mipmap/recibir_foreground"
+        android:text="@string/app_dash_recibirAlimento"
+        android:background="@android:color/white"
+        android:textColor="#2ADA8C"
+        android:layout_marginBottom="30dp"/>
 
     <Button
         android:id="@+id/activity_dashboard_aQuienesAyudamos"
@@ -55,8 +64,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="347dp"
-        android:drawableLeft="@mipmap/ic_launcher_round"
-        android:text="@string/app_dash_aQuienes" />
+        android:layout_marginTop="385dp"
+        android:drawableLeft="@mipmap/heroe_foreground"
+        android:text="@string/app_dash_aQuienes"
+        android:background="@android:color/white"
+        android:textColor="#2ADA8C"
+
+        />
 
 </RelativeLayout>
