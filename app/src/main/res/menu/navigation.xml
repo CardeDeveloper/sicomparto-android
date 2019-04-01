@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_info"
+        android:icon="@mipmap/group3"
+        android:title="@string/title_info" />
+
+    <item
+        android:id="@+id/navigation_dona"
+        android:icon="@mipmap/group17"
+        android:title="@string/title_dona" />
+
+    <item
+        android:id="@+id/navigation_perfil"
+        android:icon="@mipmap/fill1"
+        android:title="@string/title_perfil" />
+
+</menu>

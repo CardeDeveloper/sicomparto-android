@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity_queSoy">
+
+    <TextView
+        android:id="@+id/activity_queSoy_registroDon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_activity_registro_donador"
+        android:layout_marginLeft="@dimen/activity_left_margin"
+        android:textSize="30sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"/>
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="143dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radio_soyEmpresa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/codigo_soyEmpresa_desc"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/codigo_soyEmpresa"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+
+        <RadioButton
+            android:id="@+id/radio_soyPersona"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/codigo_soyPersona"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:contentDescription="@string/codigo_soyPersona_desc"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/activity_queSoy_comenzar"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="36dp"
+        android:text="@string/comenzar"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:background="@color/colorYoSiDOno"/>
+
+</RelativeLayout>

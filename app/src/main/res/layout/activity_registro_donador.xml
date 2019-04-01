@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegistroDonador">
+
+    <!---<android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_anchorGravity="left|top"
+        app:srcCompat="@mipmap/flecha_izquierda"
+        /> -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_activity_registro_donador"
+        android:layout_marginLeft="@dimen/activity_left_margin"
+        android:textSize="30sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_activity_registro_donador_nombre"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="@dimen/activity_left_margin"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"/>
+
+    <EditText
+        android:id="@+id/activity_regDon_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nombre"
+        android:layout_marginLeft="@dimen/activity_left_margin"
+        android:layout_marginRight="@dimen/activity_left_margin"
+        android:layout_gravity=""/>
+
+    <EditText
+        android:id="@+id/activity_regDon_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_left_margin"
+        android:layout_marginRight="@dimen/activity_left_margin"
+        android:hint="@string/email" />
+
+    <EditText
+        android:id="@+id/activity_regDon_telefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_left_margin"
+        android:layout_marginRight="@dimen/activity_left_margin"
+        android:hint="@string/telefono"
+        android:layout_gravity=""/>
+
+    <EditText
+        android:id="@+id/activity_regDon_direccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_left_margin"
+        android:layout_marginRight="@dimen/activity_left_margin"
+        android:hint="@string/direccion" />
+
+    <EditText
+        android:id="@+id/activity_regDon_codigoPostal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_left_margin"
+        android:layout_marginRight="@dimen/activity_left_margin"
+        android:hint="@string/codigo_postal" />
+
+    <Button
+        android:id="@+id/activity_regDon_arrowNext"
+        android:layout_width="66dp"
+        android:layout_height="50dp"
+        android:layout_gravity="end|bottom"
+        android:drawableStart="@mipmap/arrow_next" />
+
+
+
+
+
+
+</LinearLayout>

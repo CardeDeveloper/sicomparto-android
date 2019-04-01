@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Proyecto_PDM</string>
+    <string name="app_dash_hazQueTu"> "Haz que tu</string>
+    <string name="app_dash_comidaCuente">comida cuente"</string>
+    <string name="app_dash_donarAlimento">Donar \n alimento</string>
+    <string name="app_dash_recibirAlimento">Recibir \n alimento</string>
+    <string name="app_dash_aQuienes">¿A quiénes \n Ayudamos?</string>
+
+
+    <string name="title_activity__donar">Activity_Donar</string>
+    <string name="title_info">Info</string>
+    <string name="title_dona">Dona</string>
+    <string name="title_perfil">Perfil</string>
+
+
+    <string name="nombre">Nombre</string>
+    <string name="email">Email</string>
+    <string name="telefono">Teléfono</string>
+    <string name="direccion">Dirección</string>
+    <string name="codigo_postal">Código Postal</string>
+    <string name="rfc">RFC</string>
+    <string name="curp">CURP</string>
+    <string name="razon_social">Razon Social</string>
+    <string name="enviar">Enviar</string>
+
+
+    <string name="comenzar">Comenzar</string>
+    <string name="Frente">Frente</string>
+    <string name="Vuelta">Vuelta</string>
+    <string name="subeFoto">Sube foto INE o Alguna identificación Oficial</string>
+    <string name="ineEnMano">Sube foto tuya con tu INE en la mano </string>
+    <string name="conLaFoto">Con la fotografía viendo hacia el frente</string>
+
+
+    <string name="codigo_soyEmpresa">Soy Empresa</string>
+    <string name="codigo_soyEmpresa_desc">Restaurante, o cualquier empresa del \n sector alimenticio</string>
+    <string name="codigo_soyPersona_desc">Cualquier persona con residencia \n en Guadalajara, Jalisco</string>
+    <string name="codigo_soyPersona">Soy Persona</string>
+    <string name="title_activity_registro_donador">Registro Donador</string>
+    <string name="title_activity_registro_donador_nombre">Nombre de responsable</string>
+    <string name="title_activity_facturacion">Datos de Facturacion</string>
+
+</resources>
