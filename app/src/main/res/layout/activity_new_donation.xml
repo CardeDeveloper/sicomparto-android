@@ -14,7 +14,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:background="?android:selectableItemBackground"
-        android:src=""
+        android:src="@mipmap/arrow_next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -123,18 +123,12 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         app:backgroundTint="#00ff15"
-        android:src=""
+        android:src="@mipmap/arrow_next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1"/>
 
-    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@id/btnNext"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/btnNext"
-        app:dotsColor="#00ff15" />
+
 
 </android.support.constraint.ConstraintLayout>

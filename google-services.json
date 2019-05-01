@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "214792827894",
+    "firebase_url": "https://si-comparto.firebaseio.com",
+    "project_id": "si-comparto",
+    "storage_bucket": "si-comparto.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:214792827894:android:2b6d0cde517a5f77",
+        "android_client_info": {
+          "package_name": "com.iteso.proyecto_pdm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "214792827894-07np3sfqp6803jf35n7cdnbljbp81otq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iteso.proyecto_pdm",
+            "certificate_hash": "998567bfa8fc3b7184a270e2e5f277484a5a4677"
+          }
+        },
+        {
+          "client_id": "214792827894-11387mc6tjpe3gh7ucfm89bvg4ju5eup.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcofazSUQket17nN5diTUdsSV_4Sa4dmM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "214792827894-11387mc6tjpe3gh7ucfm89bvg4ju5eup.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

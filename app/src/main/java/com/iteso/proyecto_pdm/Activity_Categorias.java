@@ -19,7 +19,7 @@ public class Activity_Categorias extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Activity_Categorias.this, Activity.class);
+                Intent intent = new Intent(Activity_Categorias.this, Activity_Solicitud_Alimento.class);
                 startActivity(intent);
                 finish();
             }
