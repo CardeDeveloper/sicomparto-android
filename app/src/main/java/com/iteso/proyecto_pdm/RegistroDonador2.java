@@ -15,7 +15,7 @@ public class RegistroDonador2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_donador2);
 
-        next = findViewById(R.id.activity_regIdent_arrowNext);
+        next = findViewById(R.id.activity_regDon_arrowNext);
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
