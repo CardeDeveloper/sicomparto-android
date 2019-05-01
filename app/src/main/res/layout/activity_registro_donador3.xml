@@ -8,21 +8,41 @@
     android:orientation="vertical"
     tools:context=".RegistroDonador3">
 
-    <TextView
-        android:layout_width="316dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/activity_left_margin"
-        android:text="@string/title_activity_facturacion"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="137dp"
+        android:columnCount="2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_left_margin"
+            android:layout_marginTop="@dimen/activity_top_margin"
+            android:text="@string/title_activity_facturacion"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            />
+
+        <ImageView
+            android:layout_width="158dp"
+            android:layout_height="match_parent"
+
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:background="@mipmap/donar_background"
+            android:src="@mipmap/donar_background" />
+
+    </RelativeLayout>
 
     <EditText
         android:id="@+id/activity_regFac_nombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/nombre"
+        android:textColorHint="@color/colorYoSiDOno"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:layout_marginLeft="@dimen/activity_left_margin"
         android:layout_marginRight="@dimen/activity_left_margin"
@@ -34,7 +54,8 @@
     android:layout_height="wrap_content"
     android:layout_marginLeft="@dimen/activity_left_margin"
     android:layout_marginRight="@dimen/activity_left_margin"
-    android:hint="@string/rfc" />
+    android:hint="@string/rfc"
+        android:textColorHint="@color/colorYoSiDOno"/>
 
     <EditText
         android:id="@+id/activity_regFac_email"
@@ -42,7 +63,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/activity_left_margin"
         android:layout_marginRight="@dimen/activity_left_margin"
-        android:hint="@string/email" />
+        android:hint="@string/email"
+        android:textColorHint="@color/colorYoSiDOno"/>
 
     <EditText
         android:id="@+id/activity_regFac_curp"
@@ -50,7 +72,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/activity_left_margin"
         android:layout_marginRight="@dimen/activity_left_margin"
-        android:hint="@string/curp"/>
+        android:hint="@string/curp"
+        android:textColorHint="@color/colorYoSiDOno"/>
 
     <EditText
         android:id="@+id/activity_regFac_razon_social"
@@ -58,7 +81,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/activity_left_margin"
         android:layout_marginRight="@dimen/activity_left_margin"
-        android:hint="@string/razon_social" />
+        android:hint="@string/razon_social"
+        android:textColorHint="@color/colorYoSiDOno"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -74,7 +98,7 @@
             android:text="@string/enviar"
             android:textColor="@android:color/white"
             android:textSize="20sp"
-            android:background="@color/colorYoSiDOno"/>
+            android:background="@drawable/btn_comenzar_background"/>
 
     </RelativeLayout>
 

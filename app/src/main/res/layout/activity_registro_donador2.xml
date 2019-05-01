@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/title_activity_registro_donador"
-        android:layout_marginTop="@dimen/activity_left_margin"
+        android:layout_marginTop="@dimen/activity_top_margin"
         android:layout_marginLeft="@dimen/activity_left_margin"
         android:textSize="30sp"
         android:textColor="@android:color/black"
@@ -28,37 +28,47 @@
         android:textSize="15sp"
         android:textColor="@android:color/black"/>
 
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:layout_marginLeft="@dimen/activity_left_margin">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Frente"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="@dimen/grid_top_margin"
         android:layout_marginLeft="@dimen/activity_left_margin"
         android:textAlignment="center"
         android:textSize="15sp"
         android:textColor="@android:color/black"/>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/ine"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Vuelta"
-        android:layout_marginLeft="@dimen/activity_left_margin"
-        android:textAlignment="center"
-        android:textSize="15sp"
-        android:textColor="@android:color/black"
-        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Vuelta"
+            android:layout_marginTop="@dimen/grid_top_margin"
+            android:layout_marginLeft="@dimen/activity_left_margin"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/ine"
         />
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ine"
+        />
+    </GridLayout>
 
     <TextView
         android:layout_width="295dp"
@@ -66,7 +76,6 @@
         android:layout_marginLeft="@dimen/activity_left_margin"
         android:layout_marginTop="30dp"
         android:text="@string/ineEnMano"
-        android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="15sp" />
 
@@ -75,15 +84,22 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/activity_left_margin"
         android:text="@string/conLaFoto"
-        android:textAlignment="center"
         android:textColor="@android:color/darker_gray"
         android:textSize="15sp" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_top_margin"
+        android:layout_marginLeft="@dimen/activity_left_margin"
+        android:src="@mipmap/ine"
+        />
 
     <Button
-        android:id="@+id/activity_regIdent_arrowNext"
-        android:layout_width="66dp"
+        android:id="@+id/activity_regDon_arrowNext"
+        android:layout_width="53dp"
         android:layout_height="50dp"
         android:layout_gravity="end|bottom"
+        android:background="@drawable/btn_comenzar_background"
         android:drawableStart="@mipmap/arrow_next" />
 
 </LinearLayout>

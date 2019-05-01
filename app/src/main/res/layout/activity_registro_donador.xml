@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".RegistroDonador">
+    tools:context=".RegistroDonador"
+    >
 
     <!---<android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
@@ -17,29 +18,49 @@
         app:srcCompat="@mipmap/flecha_izquierda"
         /> -->
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/title_activity_registro_donador"
-        android:layout_marginLeft="@dimen/activity_left_margin"
-        android:textSize="30sp"
-        android:textColor="@android:color/black"
-        android:textStyle="bold"/>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="137dp"
+        android:columnCount="2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_left_margin"
+            android:layout_marginTop="@dimen/activity_top_margin"
+            android:text="@string/title_activity_registro_donador"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="158dp"
+            android:layout_height="match_parent"
+
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:background="@mipmap/donar_background"
+            android:src="@mipmap/donar_background" />
+
+    </RelativeLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/title_activity_registro_donador_nombre"
-        android:layout_marginTop="60dp"
         android:layout_marginLeft="@dimen/activity_left_margin"
         android:textSize="15sp"
-        android:textColor="@android:color/black"/>
-
+        android:textColor="@android:color/black"
+        android:textStyle="bold"/>
     <EditText
         android:id="@+id/activity_regDon_nombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/nombre"
+        android:textColorHint="@color/colorYoSiDOno"
+        android:layout_marginTop="@dimen/activity_top_margin"
         android:layout_marginLeft="@dimen/activity_left_margin"
         android:layout_marginRight="@dimen/activity_left_margin"
         android:layout_gravity=""/>
@@ -50,7 +71,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/activity_left_margin"
         android:layout_marginRight="@dimen/activity_left_margin"
-        android:hint="@string/email" />
+        android:layout_marginTop="@dimen/activity_top_margin"
+        android:hint="@string/email"
+        android:textColorHint="@color/colorYoSiDOno"/>
 
     <EditText
         android:id="@+id/activity_regDon_telefono"
@@ -58,7 +81,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/activity_left_margin"
         android:layout_marginRight="@dimen/activity_left_margin"
+        android:layout_marginTop="@dimen/activity_top_margin"
         android:hint="@string/telefono"
+        android:textColorHint="@color/colorYoSiDOno"
         android:layout_gravity=""/>
 
     <EditText
@@ -67,7 +92,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/activity_left_margin"
         android:layout_marginRight="@dimen/activity_left_margin"
-        android:hint="@string/direccion" />
+        android:layout_marginTop="@dimen/activity_top_margin"
+        android:hint="@string/direccion"
+        android:textColorHint="@color/colorYoSiDOno"/>
 
     <EditText
         android:id="@+id/activity_regDon_codigoPostal"
@@ -75,13 +102,17 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/activity_left_margin"
         android:layout_marginRight="@dimen/activity_left_margin"
-        android:hint="@string/codigo_postal" />
+        android:layout_marginTop="@dimen/activity_top_margin"
+        android:hint="@string/codigo_postal"
+        android:textColorHint="@color/colorYoSiDOno"/>
 
     <Button
         android:id="@+id/activity_regDon_arrowNext"
-        android:layout_width="66dp"
+        android:layout_width="53dp"
         android:layout_height="50dp"
+        android:layout_marginTop="@dimen/activity_top_margin"
         android:layout_gravity="end|bottom"
+        android:background="@drawable/btn_comenzar_background"
         android:drawableStart="@mipmap/arrow_next" />
 
 
