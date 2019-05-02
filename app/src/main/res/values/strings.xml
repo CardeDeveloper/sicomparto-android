@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Proyecto_PDM</string>
+    <string name="facebook_app_id">2134015680049427</string>
+    <string name="fb_login_protocol_scheme">fb2134015680049427</string>
+
     <string name="app_dash_hazQueTu"> "Haz que tu</string>
     <string name="app_dash_comidaCuente">comida cuente"</string>
     <string name="app_dash_donarAlimento">Donar \n alimento</string>
