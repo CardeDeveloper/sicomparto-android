@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.iteso.proyecto_pdm">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NewDonationActivity"></activity>
+        <activity android:name=".NewDonationActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,7 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity_Dashboard"></activity>
+        <activity android:name=".Activity_Dashboard" />
         <activity
             android:name=".Activity_Donar"
             android:label="@string/title_activity__donar" />
@@ -28,6 +30,10 @@
         <activity android:name=".Activity_Solicitud_Alimento" />
         <activity android:name=".Activity_Solicitud_Horario" />
         <activity android:name=".Activity_Categorias" />
+
+
+
+        <activity android:name=".RegistroDonadorEmpresa"></activity>
     </application>
 
 </manifest>
