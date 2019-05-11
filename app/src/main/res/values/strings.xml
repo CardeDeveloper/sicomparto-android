@@ -28,12 +28,12 @@
 
 
     <string name="comenzar">Comenzar</string>
-    <string name="Frente">Frente</string>
+    <string name= "Frente">Frente</string>
     <string name="Vuelta">Vuelta</string>
     <string name="subeFoto">Sube foto INE o Alguna identificación Oficial</string>
     <string name="ineEnMano">Sube foto tuya con tu INE en la mano </string>
     <string name="conLaFoto">Con la fotografía viendo hacia el frente</string>
-
+    <string name="Selecciona_imagen">Selecciona imagen</string>
 
     <string name="codigo_soyEmpresa">Soy Empresa</string>
     <string name="codigo_soyEmpresa_desc">Restaurante, o cualquier empresa del \n sector alimenticio</string>
