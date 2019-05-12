@@ -58,7 +58,9 @@ public class LoginActivity extends AppCompatActivity {
         mCallbackManager = CallbackManager.Factory.create();
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken("214792827894-07np3sfqp6803jf35n7cdnbljbp81otq.apps.googleusercontent.com")
+                .requestIdToken("214792827894-11387mc6tjpe3gh7ucfm89bvg4ju5eup.apps.googleusercontent.com")
+
+                //.requestIdToken("214792827894-07np3sfqp6803jf35n7cdnbljbp81otq.apps.googleusercontent.com")
                 .requestEmail()
                 .build();
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
@@ -190,8 +192,9 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
     }
-    public final int RC_SIGN_IN = 10;
+    private static final int RC_SIGN_IN = 9001;
     private void signIn() {
+
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
@@ -206,17 +209,18 @@ public class LoginActivity extends AppCompatActivity {
             try {
                 // Google Sign In was successful, authenticate with Firebase
                 GoogleSignInAccount account = task.getResult(ApiException.class);
+                Log.e("sigin", "google entro al login");
                 firebaseAuthWithGoogle(account);
             } catch (ApiException e) {
                 // Google Sign In failed, update UI appropriately
-                Log.w("tag:google", "Google sign in failed", e);
+                Log.e("tag:google", "Google sign in failed", e);
                 // ...
             }
         }
     }
 
     protected  void login(String token){
-        /*SharedPreferences sharedPreferences =
+        SharedPreferences sharedPreferences =
                 getSharedPreferences(Constants.MAIN_PACKAGE, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(Constants.TOKEN_PREFERENCE, token);
