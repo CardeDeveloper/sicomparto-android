@@ -23,7 +23,8 @@
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/greenMain"
                 android:hint="@string/verdura"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:onClick="onCheckBoxClicked"/>
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -43,8 +44,9 @@
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/greenMain"
                 android:hint="@string/lacteos"
+                android:layout_weight="1"
                 android:checked="true"
-                android:layout_weight="1"/>
+                android:onClick="onCheckBoxClicked"/>
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -64,7 +66,8 @@
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/greenMain"
                 android:hint="@string/cereales"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:onClick="onCheckBoxClicked"/>
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -84,8 +87,9 @@
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/greenMain"
                 android:hint="@string/carnes_rojas"
+                android:layout_weight="1"
                 android:checked="true"
-                android:layout_weight="1"/>
+                android:onClick="onCheckBoxClicked"/>
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -105,7 +109,8 @@
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/greenMain"
                 android:hint="@string/carnes_blancas"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:onClick="onCheckBoxClicked"/>
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -125,7 +130,8 @@
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/greenMain"
                 android:hint="@string/comida_rapida"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:onClick="onCheckBoxClicked"/>
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -145,7 +151,8 @@
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/greenMain"
                 android:hint="@string/mermelada_cremas"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:onClick="onCheckBoxClicked"/>
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -165,7 +172,8 @@
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/greenMain"
                 android:hint="@string/condimentos"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:onClick="onCheckBoxClicked"/>
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -186,7 +194,8 @@
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/greenMain"
                 android:hint="@string/cafe"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:onClick="onCheckBoxClicked"/>
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -206,7 +215,8 @@
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/greenMain"
                 android:hint="@string/pasteles"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:onClick="onCheckBoxClicked"/>
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -226,7 +236,8 @@
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/greenMain"
                 android:hint="@string/enlatados"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:onClick="onCheckBoxClicked"/>
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -246,7 +257,8 @@
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/greenMain"
                 android:hint="@string/agua"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:onClick="onCheckBoxClicked"/>
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -266,7 +278,8 @@
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/greenMain"
                 android:hint="@string/dulces"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:onClick="onCheckBoxClicked"/>
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -286,7 +299,8 @@
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/greenMain"
                 android:hint="@string/jugos"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:onClick="onCheckBoxClicked"/>
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -306,7 +320,8 @@
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/greenMain"
                 android:hint="@string/leguminosas"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:onClick="onCheckBoxClicked"/>
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -326,7 +341,8 @@
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/greenMain"
                 android:hint="@string/procesados"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:onClick="onCheckBoxClicked"/>
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

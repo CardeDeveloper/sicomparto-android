@@ -12,20 +12,22 @@
         android:text="@string/title_solicitud"
         android:textSize="@dimen/activity_solicitud_title"
         android:textColor="@color/greenMain"
-        android:paddingBottom="62dp"/>
+        android:paddingBottom="@dimen/padding_bottom"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="¿Qué déas puede recibir la comida?"
+        android:text="¿Qué días puede recibir la comida?"
         android:textColor="@color/mainBlack"
         android:textStyle="bold"
         android:textSize="@dimen/activity_solicitud_secondary"/>
 
     <EditText
-        android:id="@+id/activity_solicitud_horario_days"
+        android:id="@+id/activity_solicitud_horario_calendar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="false"
+        android:onClick="onClick"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -36,26 +38,31 @@
         android:textSize="@dimen/activity_solicitud_secondary"/>
 
     <EditText
+        android:id="@+id/activity_solicitud_horario_time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Danos un rango de tiempo" />
+        android:hint="Danos un rango de tiempo"
+        android:focusableInTouchMode="false"
+        android:onClick="onClick"/>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:orientation="vertical"
-        android:gravity="bottom|center">
-        
+        android:layout_height="match_parent">
+
         <Button
             android:id="@+id/activity_solicitud_horario_enviar"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="Enviar"
+            android:layout_width="@dimen/button_layout_width"
+            android:layout_height="@dimen/button_layout_height"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/cancelar_margin_button"
+            android:text="@string/enviar"
             android:textColor="@android:color/white"
-            android:backgroundTint="@color/greenMain"/>
+            android:textSize="@dimen/button_text_size"
+            android:background="@drawable/btn_comenzar_background"/>
 
 
-    </LinearLayout>
+    </RelativeLayout>
 
 
 </LinearLayout>

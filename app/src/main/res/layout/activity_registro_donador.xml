@@ -59,7 +59,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/nombre"
-        android:textColorHint="@color/colorYoSiDOno"
+        android:textColorHint="@color/greenMain"
+        android:inputType="textCapWords"
         android:layout_marginTop="@dimen/activity_top_margin"
         android:layout_marginLeft="@dimen/activity_left_margin"
         android:layout_marginRight="@dimen/activity_left_margin"
@@ -69,42 +70,46 @@
         android:id="@+id/activity_regDon_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
         android:layout_marginLeft="@dimen/activity_left_margin"
         android:layout_marginRight="@dimen/activity_left_margin"
         android:layout_marginTop="@dimen/activity_top_margin"
         android:hint="@string/email"
-        android:textColorHint="@color/colorYoSiDOno"/>
+        android:textColorHint="@color/greenMain"/>
 
     <EditText
         android:id="@+id/activity_regDon_telefono"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="phone"
         android:layout_marginLeft="@dimen/activity_left_margin"
         android:layout_marginRight="@dimen/activity_left_margin"
         android:layout_marginTop="@dimen/activity_top_margin"
         android:hint="@string/telefono"
-        android:textColorHint="@color/colorYoSiDOno"
+        android:textColorHint="@color/greenMain"
         android:layout_gravity=""/>
 
     <EditText
         android:id="@+id/activity_regDon_direccion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="textCapWords"
         android:layout_marginLeft="@dimen/activity_left_margin"
         android:layout_marginRight="@dimen/activity_left_margin"
         android:layout_marginTop="@dimen/activity_top_margin"
         android:hint="@string/direccion"
-        android:textColorHint="@color/colorYoSiDOno"/>
+        android:textColorHint="@color/greenMain"/>
 
     <EditText
         android:id="@+id/activity_regDon_codigoPostal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
         android:layout_marginLeft="@dimen/activity_left_margin"
         android:layout_marginRight="@dimen/activity_left_margin"
         android:layout_marginTop="@dimen/activity_top_margin"
         android:hint="@string/codigo_postal"
-        android:textColorHint="@color/colorYoSiDOno"/>
+        android:textColorHint="@color/greenMain"/>
 
     <Button
         android:id="@+id/activity_regDon_arrowNext"
@@ -114,9 +119,6 @@
         android:layout_gravity="end|bottom"
         android:background="@drawable/btn_comenzar_background"
         android:drawableStart="@mipmap/arrow_next" />
-
-
-
 
 
 

@@ -25,6 +25,9 @@
     <string name="curp">CURP</string>
     <string name="razon_social">Razon Social</string>
     <string name="enviar">Enviar</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="cancelar">Cancelar</string>
+
 
 
     <string name="comenzar">Comenzar</string>

@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_margin="@dimen/activity_general_margin"
     tools:context=".Activity_queSoy">
 
     <TextView
@@ -29,14 +30,20 @@
 
         <RadioButton
             android:id="@+id/radio_soyEmpresa"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:contentDescription="@string/codigo_soyEmpresa_desc"
             android:onClick="onRadioButtonClicked"
             android:text="@string/codigo_soyEmpresa"
             android:textSize="20sp"
             android:textStyle="bold"
-            />
+            android:gravity="top"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/codigo_soyEmpresa_desc"
+            android:textSize="@dimen/activity_queSoy_hintSize"
+            android:paddingBottom="@dimen/activity_queSoy_padding"/>
 
         <RadioButton
             android:id="@+id/radio_soyPersona"
@@ -47,6 +54,15 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:contentDescription="@string/codigo_soyPersona_desc"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/codigo_soyPersona_desc"
+            android:textSize="@dimen/activity_queSoy_hintSize"
+            android:paddingBottom="@dimen/activity_queSoy_padding"/>
+
+
     </RadioGroup>
 
     <Button
