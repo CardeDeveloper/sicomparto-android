@@ -43,24 +43,26 @@
         android:layout_height="wrap_content"
         android:hint="@string/nombre"
         android:textColorHint="@color/colorYoSiDOno"
+        android:inputType="textPersonName"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:layout_marginLeft="@dimen/activity_left_margin"
         android:layout_marginRight="@dimen/activity_left_margin"
         android:layout_gravity=""/>
 
     <EditText
-    android:id="@+id/activity_regFac_RFC"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="@dimen/activity_left_margin"
-    android:layout_marginRight="@dimen/activity_left_margin"
-    android:hint="@string/rfc"
+        android:id="@+id/activity_regFac_RFC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_left_margin"
+        android:layout_marginRight="@dimen/activity_left_margin"
+        android:hint="@string/rfc"
         android:textColorHint="@color/colorYoSiDOno"/>
 
     <EditText
         android:id="@+id/activity_regFac_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
         android:layout_marginLeft="@dimen/activity_left_margin"
         android:layout_marginRight="@dimen/activity_left_margin"
         android:hint="@string/email"

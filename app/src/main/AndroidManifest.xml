@@ -45,6 +45,7 @@
         <activity android:name=".Activity_Solicitud_Alimento" />
         <activity android:name=".Activity_Solicitud_Horario" />
         <activity android:name=".Activity_Categorias" />
+        <activity android:name=".ActivityCalendar" />
         <activity android:name=".RegistroDonadorEmpresa"></activity>
     </application>
 

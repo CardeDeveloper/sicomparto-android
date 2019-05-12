@@ -26,13 +26,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
-        android:text="Nueva donación"
-        android:textColor="#00ff15"
-        android:textSize="30sp"
+        android:text="Nueva Donación"
+        android:textSize="@dimen/activity_donacion_title"
         android:textStyle="bold"
+        android:textColor="@color/greenMain"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnBack" />
+        app:layout_constraintTop_toBottomOf="@id/btnBack"/>
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/txtLayoutDays"
@@ -47,9 +47,12 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <EditText
+            android:id="@+id/activity_donacion_calendar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="¿Que dias quieres que pasemos por tu comida?" />
+            android:hint="¿Qué días quieres que pasemos por tu comida?"
+            android:focusableInTouchMode="false"
+            android:onClick="onClick"/>
 
     </android.support.design.widget.TextInputLayout>
 
@@ -66,7 +69,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/editHours"
+        android:id="@+id/activity_donacion_time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -74,7 +77,9 @@
         android:hint="Danos un rango de tiempo"
         app:layout_constraintTop_toBottomOf="@id/txtHoursTag"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        android:focusableInTouchMode="false"
+        android:onClick="onClick"/>
 
 
     <RadioGroup
@@ -86,7 +91,7 @@
         android:layout_marginEnd="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editHours">
+        app:layout_constraintTop_toBottomOf="@id/activity_donacion_time">
 
         <RadioButton
             android:layout_width="match_parent"
@@ -122,7 +127,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        app:backgroundTint="#00ff15"
+        android:backgroundTint="@color/greenMain"
         android:src="@mipmap/arrow_next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
