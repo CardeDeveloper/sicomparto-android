@@ -41,7 +41,7 @@
         android:layout_marginTop="132dp"
         android:drawableLeft="@mipmap/donar_foreground"
         android:text="@string/app_dash_donarAlimento"
-        android:background="@android:color/white"
+        android:background="@drawable/btn_comenzar_background_blanco"
         android:textColor="#2ADA8C"
         android:layout_marginBottom="10dp"/>
 
@@ -54,7 +54,7 @@
         android:layout_marginTop="260dp"
         android:drawableLeft="@mipmap/recibir_foreground"
         android:text="@string/app_dash_recibirAlimento"
-        android:background="@android:color/white"
+        android:background="@drawable/btn_comenzar_background_blanco"
         android:textColor="#2ADA8C"
         android:layout_marginBottom="30dp"/>
 
@@ -67,7 +67,7 @@
         android:layout_marginTop="385dp"
         android:drawableLeft="@mipmap/heroe_foreground"
         android:text="@string/app_dash_aQuienes"
-        android:background="@android:color/white"
+        android:background="@drawable/btn_comenzar_background_blanco"
         android:textColor="#2ADA8C"
 
         />

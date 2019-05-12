@@ -14,6 +14,7 @@
     <string name="title_info">Info</string>
     <string name="title_dona">Dona</string>
     <string name="title_perfil">Perfil</string>
+    <string name="title_queHacemos">¿Qué hacemos?</string>
 
 
     <string name="nombre">Nombre</string>
@@ -33,6 +34,7 @@
     <string name="subeFoto">Sube foto INE o Alguna identificación Oficial</string>
     <string name="ineEnMano">Sube foto tuya con tu INE en la mano </string>
     <string name="conLaFoto">Con la fotografía viendo hacia el frente</string>
+    <string name="promedioKg">¿Promedio de kg desperdiciado?</string>
 
 
     <string name="codigo_soyEmpresa">Soy Empresa</string>
@@ -41,6 +43,8 @@
     <string name="codigo_soyPersona">Soy Persona</string>
     <string name="title_activity_registro_donador">Registro Donador</string>
     <string name="title_activity_registro_donador_nombre">Nombre de responsable</string>
+    <string name="title_activity_registro_donador_empresa_nombre">Nombre de empresa</string>
+    <string name="title_activity_registro_donador_empresa_descripcion">Descripción breve de servicios de su empresa</string>
     <string name="title_activity_facturacion">Datos de Facturacion</string>
 
     <string name="title_solicitud">Solicitud</string>
