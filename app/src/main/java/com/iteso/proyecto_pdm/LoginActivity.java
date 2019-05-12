@@ -47,8 +47,8 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        FirebaseAuth.getInstance().signOut();
-        LoginManager.getInstance().logOut();
+        //FirebaseAuth.getInstance().signOut();
+        //LoginManager.getInstance().logOut();
         login  = (Button) findViewById(R.id.activity_login_btn);
         correo = findViewById(R.id.login_activity_email);
         pass = findViewById(R.id.login_activity_pass);
@@ -225,7 +225,7 @@ public class LoginActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(Constants.TOKEN_PREFERENCE, token);
         editor.apply(); //apply asincrono , commit sincrono*/
-
+        Log.e("usuario_token", token);
         Intent intent = new Intent(LoginActivity.this, Activity_Dashboard.class);
         startActivity(intent);
     }
