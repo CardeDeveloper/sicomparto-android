@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".RegistroDonador2">
+    tools:context=".RegistroDonador22">
 
     <TextView
         android:layout_width="wrap_content"
@@ -34,29 +34,27 @@
         android:columnCount="1"
         android:layout_marginLeft="@dimen/activity_left_margin">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Frente"
-        android:layout_marginTop="@dimen/grid_top_margin"
-        android:layout_marginLeft="@dimen/activity_left_margin"
-        android:textAlignment="center"
-        android:textSize="15sp"
-        android:textColor="@android:color/black"/>
 
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Vuelta"
+            android:layout_marginTop="@dimen/grid_top_margin"
+            android:layout_marginLeft="@dimen/activity_left_margin"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            />
 
     <ImageView
-        android:id="@+id/imagemIdFrente"
+        android:id="@+id/imagemIdVuelta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/ine"
         />
 
-
-
         <Button
-            android:id="@+id/btnCargarImgFrente"
+            android:id="@+id/btnCargarImgVuelta"
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:background="@drawable/btn_comenzar_background"
@@ -64,13 +62,11 @@
             android:onClick="onclick"
             android:textSize="10dp"/>
 
-
     </GridLayout>
 
 
-
     <Button
-        android:id="@+id/activity_regDon2_arrowNext"
+        android:id="@+id/activity_regDon22_arrowNext"
         android:layout_width="53dp"
         android:layout_height="50dp"
         android:layout_gravity="end|bottom"
