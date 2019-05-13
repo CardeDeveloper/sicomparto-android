@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class Activity_Solicitud_Horario extends AppCompatActivity {
 
-    EditText calendar, time;
+    EditText calendar;
     Button next;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -19,7 +19,7 @@ public class Activity_Solicitud_Horario extends AppCompatActivity {
         setContentView(R.layout.activity_solicitud_horario);
 
         calendar = findViewById(R.id.activity_solicitud_horario_calendar);
-        time = findViewById(R.id.activity_solicitud_horario_time);
+
         next = findViewById(R.id.activity_solicitud_horario_enviar);
 
         next.setOnClickListener(new View.OnClickListener() {
@@ -67,11 +67,6 @@ public class Activity_Solicitud_Horario extends AppCompatActivity {
             case R.id.activity_solicitud_horario_calendar:
                 intent = new Intent(this, ActivityCalendar.class);
                 startActivityForResult(intent, Constants.SOLICITUD_CALENDAR);
-                break;
-            case R.id.activity_solicitud_horario_time:
-                //TODO: change activityClendar for Activity time
-                intent = new Intent(this, ActivityCalendar.class);
-                startActivityForResult(intent, Constants.SOLICITUD_TIME);
                 break;
             //case R.id.activity_solicitud_horario_enviar:
               //  break;

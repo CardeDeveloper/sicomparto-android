@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class NewDonationActivity extends AppCompatActivity {
 
-    FloatingActionButton next;
+    Button next;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

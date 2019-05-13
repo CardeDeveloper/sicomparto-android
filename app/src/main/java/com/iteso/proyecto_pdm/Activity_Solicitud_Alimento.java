@@ -12,7 +12,8 @@ import android.widget.ImageButton;
 
 public class Activity_Solicitud_Alimento extends AppCompatActivity {
 
-    ImageButton next, categories;
+    ImageButton categories;
+    Button next;
     CheckBox carnesRojasBox, lacteosBox;
 
 

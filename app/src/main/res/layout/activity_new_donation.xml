@@ -7,20 +7,6 @@
     android:layout_margin="@dimen/activity_general_margin"
     android:background="@android:color/white">
 
-    <ImageButton
-        android:id="@+id/btnBack"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:background="?android:selectableItemBackground"
-        android:src="@mipmap/arrow_next"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/txtTitleTag"
         android:layout_width="match_parent"
@@ -122,18 +108,22 @@
 
     </RadioGroup>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/btnNext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/greenMain"
-        android:src="@mipmap/arrow_next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1"/>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="53dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/activity_top_margin"
+            android:layout_gravity="end|bottom"
+            android:background="@drawable/btn_comenzar_background"
+            android:drawableStart="@mipmap/arrow_next"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
 
 
 

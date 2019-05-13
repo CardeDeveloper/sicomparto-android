@@ -1,9 +1,9 @@
 package com.iteso.proyecto_pdm;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,17 +11,13 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-/*import com.google.cloud.firestore.Firestore;
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.FirebaseOptions;
-import com.google.firebase.cloud.FirestoreClient;*/
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class RegistroDonador extends AppCompatActivity {
+public class RegistroOrganizacion extends AppCompatActivity {
 
 
     String initialDocRef = Constants.USUARIOS;
@@ -33,21 +29,21 @@ public class RegistroDonador extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registro_donador);
+        setContentView(R.layout.registro_organizacion);
 
-        nombre = findViewById(R.id.activity_regDon_nombre);
-        email = findViewById(R.id.activity_regDon_email);
-        telefono = findViewById(R.id.activity_regDon_telefono);
-        direccion = findViewById(R.id.activity_regDon_direccion);
-        codigoPostal = findViewById(R.id.activity_regDon_codigoPostal);
+        nombre = findViewById(R.id.activity_registro_organizacion_nombre);
+        email = findViewById(R.id.activity_registro_organizacion_email);
+        telefono = findViewById(R.id.activity_registro_organizacion_telefono);
+        direccion = findViewById(R.id.activity_registro_organizacion_direccion);
+        codigoPostal = findViewById(R.id.activity_registro_organizacion_codigoPostal);
 
-        next = findViewById(R.id.activity_regDon_arrowNext);
+        next = findViewById(R.id.activity_registro_organizacion2_next);
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Map<String, Object> donor = new HashMap<>();
+                Map<String, Object> org = new HashMap<>();
                 final Toast toast;
 
                 //todos los campos llenos
@@ -58,16 +54,16 @@ public class RegistroDonador extends AppCompatActivity {
                     docRef = FirebaseFirestore.getInstance().document(initialDocRef);
 
                     //llenando firestore
-                    donor.put(getString(R.string.nombre), nombre.getText().toString());
-                    donor.put(getString(R.string.email), email.getText().toString());
-                    donor.put(getString(R.string.telefono), telefono.getText().toString());
-                    donor.put(getString(R.string.direccion), direccion.getText().toString());
-                    donor.put(getString(R.string.codigo_postal), codigoPostal.getText().toString());
+                    org.put(getString(R.string.nombre), nombre.getText().toString());
+                    org.put(getString(R.string.email), email.getText().toString());
+                    org.put(getString(R.string.telefono), telefono.getText().toString());
+                    org.put(getString(R.string.direccion), direccion.getText().toString());
+                    org.put(getString(R.string.codigo_postal), codigoPostal.getText().toString());
 
-                    docRef.update(donor).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    docRef.update(org).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
-                            Intent intent = new Intent(RegistroDonador.this, RegistroDonador2.class);
+                            Intent intent = new Intent(RegistroOrganizacion.this, RegistroOrganizacion2.class);
                             startActivity(intent);
                         }
                     }).addOnFailureListener(new OnFailureListener() {
