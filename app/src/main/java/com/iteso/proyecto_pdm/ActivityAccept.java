@@ -27,9 +27,9 @@ public class ActivityAccept extends AppCompatActivity {
         dataGroup = findViewById(R.id.activity_accept_data_groups);
         accept = findViewById(R.id.activity_accept_aceptar);
 
-        String path = Constants.REGISTROS
+        String path = Constants.REGISTROS;
 
-        DocumentReference documentReference = FirebaseFirestore.getInstance().document(strDocRef);
+        /*DocumentReference documentReference = FirebaseFirestore.getInstance().document(strDocRef);
 
         documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
@@ -44,6 +44,6 @@ public class ActivityAccept extends AppCompatActivity {
                             toast1.show();
                         }
                     });
-                }
+                }*/
     }
 }

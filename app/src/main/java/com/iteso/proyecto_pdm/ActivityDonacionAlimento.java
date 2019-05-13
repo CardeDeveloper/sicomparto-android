@@ -93,7 +93,6 @@ public class ActivityDonacionAlimento extends AppCompatActivity {
             @Override
             public void onSuccess(Void aVoid) {
                 Toast.makeText(getApplicationContext(), "Donacion exitosa", Toast.LENGTH_LONG).show();
-                Constants.count ++;
             }
         });
 

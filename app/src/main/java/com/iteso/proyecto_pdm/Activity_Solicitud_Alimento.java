@@ -92,7 +92,6 @@ public class Activity_Solicitud_Alimento extends AppCompatActivity {
             @Override
             public void onSuccess(Void aVoid) {
                 Toast.makeText(getApplicationContext(), "Solicitud Exitosa", Toast.LENGTH_LONG).show();
-                Constants.count ++;
             }
         });
 

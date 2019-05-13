@@ -1,6 +1,7 @@
 package com.iteso.proyecto_pdm;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -65,7 +67,12 @@ public class NewDonationActivity extends AppCompatActivity {
 
                 DocumentReference documentReference = FirebaseFirestore.getInstance().document(path);
 
-                documentReference.set(map);
+                documentReference.set(map).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(getApplicationContext(), "Something went wrong", Toast.LENGTH_LONG);
+                    }
+                });
 
                 //TODO: save in firebase
             }

@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application
+        android:screenOrientation="portrait"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -36,33 +37,54 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
-        <activity android:name=".SplashActivity">
+        <activity android:name=".SplashActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NewDonationActivity" />
-        <activity android:name=".LoginActivity"></activity>
-        <activity android:name=".Activity_Dashboard" />
+        <activity android:name=".NewDonationActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".LoginActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".Activity_Dashboard"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Activity_Donar"
-            android:label="@string/title_activity__donar" />
+            android:label="@string/title_activity__donar"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".RegistroDonador"
-            android:windowSoftInputMode="adjustResize"/>
-        <activity android:name=".Activity_queSoy" />
-        <activity android:name=".RegistroDonador2" />
-        <activity android:name=".RegistroDonador22" />
-        <activity android:name=".RegistroDonador23" />
-        <activity android:name=".RegistroDonador3" />
-        <activity android:name=".Activity_Solicitud_Alimento" />
-        <activity android:name=".Activity_Solicitud_Horario" />
-        <activity android:name=".Activity_Categorias" />
-        <activity android:name=".ActivityCalendar" />
-        <activity android:name=".RegistroDonadorEmpresa" />
-        <activity android:name=".ActivityDonacionAlimento"/>
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity_queSoy"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RegistroDonador2"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RegistroDonador22"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RegistroDonador23"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RegistroDonador3"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity_Solicitud_Alimento"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity_Solicitud_Horario"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity_Categorias" android:screenOrientation="portrait"/>
+        <activity android:name=".ActivityCalendar"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RegistroDonadorEmpresa"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ActivityDonacionAlimento"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RegistroOrganizacion" android:screenOrientation="portrait"/>
+        <activity android:name=".RegistroOrganizacion2"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RegistroOrganizacion3"
+            android:screenOrientation="portrait"/>
 
         <service android:name=".services.MyFirebaseMessagingService">
             <intent-filter>

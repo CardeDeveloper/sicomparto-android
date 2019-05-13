@@ -1,6 +1,7 @@
 package com.iteso.proyecto_pdm;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -47,18 +48,21 @@ public class RegistroOrganizacion2 extends AppCompatActivity {
                 //todos los campos llenos
                 if(nombre.getText().length() > 0 && razon.getText().length() > 0 && rfc.getText().length() > 0){
 
-                    initialDocRef += nombre.getText().toString();
+                    SharedPreferences sharedPreferences = getSharedPreferences(Constants.MAIN_PACKAGE, MODE_PRIVATE);
+                    String document = sharedPreferences.getString(Constants.TOKEN_PREFERENCE, null);
+
+                    initialDocRef += document;
                     docRef = FirebaseFirestore.getInstance().document(initialDocRef);
 
                     //llenando firestore
-                    org.put(getString(R.string.nombre), nombre.getText().toString());
-                    org.put(getString(R.string.razon), razon.getText().toString());
+                    org.put("nombreOrg", nombre.getText().toString());
+                    org.put("RazonOrg", razon.getText().toString());
                     org.put(getString(R.string.rfc), rfc.getText().toString());
 
                     docRef.update(org).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
-                            Intent intent = new Intent(RegistroOrganizacion2.this, RegistroOrganizacion3.class);
+                            Intent intent = new Intent(RegistroOrganizacion2.this, Activity_Solicitud_Horario.class);
                             startActivity(intent);
                         }
                     }).addOnFailureListener(new OnFailureListener() {

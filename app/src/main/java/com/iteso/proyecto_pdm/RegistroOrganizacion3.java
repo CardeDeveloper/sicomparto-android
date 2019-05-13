@@ -51,7 +51,7 @@ public class RegistroOrganizacion3 extends AppCompatActivity {
 
                     //llenando firestore
                     org.put(getString(R.string.nombre), causa.getText().toString());
-                    org.put(getString(R.string.razon), personas.getText().toString());
+                    org.put(getString(R.string.razon_social), personas.getText().toString());
 
                     docRef.update(org).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
