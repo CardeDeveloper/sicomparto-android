@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegistroDonador"
+    android:layout_margin="@dimen/activity_general_margin">
+
+    <!---<android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_anchorGravity="left|top"
+        app:srcCompat="@mipmap/flecha_izquierda"
+        /> -->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="137dp"
+        android:columnCount="2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_left_margin"
+            android:layout_marginTop="@dimen/activity_top_margin"
+            android:text="@string/registro_organizacion_title"
+            android:textColor="@android:color/black"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="158dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:src="@mipmap/recibir_background" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_activity_registro_donador_nombre"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:paddingBottom="@dimen/activity_solicitud_secondary"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/registro_organizacion_causa"
+        android:textColor="@color/mainBlack"
+        android:textStyle="bold"
+        android:textSize="@dimen/activity_solicitud_secondary"/>
+
+    <EditText
+        android:id="@+id/activity_registro_organizacion_causa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/registro_organizacion_descripción" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/registro_organizacion_personas"
+        android:textColor="@color/mainBlack"
+        android:textStyle="bold"
+        android:textSize="@dimen/activity_solicitud_secondary"
+        android:paddingTop="25dp"/>
+
+    <EditText
+        android:id="@+id/activity_registro_organizacion_personas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            android:id="@+id/activity_registro_organizacion_next"
+            android:layout_width="53dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/activity_top_margin"
+            android:layout_gravity="end|bottom"
+            android:background="@drawable/btn_comenzar_background"
+            android:drawableStart="@mipmap/arrow_next"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

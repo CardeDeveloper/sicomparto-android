@@ -51,6 +51,12 @@
     <string name="title_activity_registro_donador_empresa_descripcion">Descripción breve de servicios de su empresa</string>
     <string name="title_activity_facturacion">Datos de Facturacion</string>
 
+    <string name="registro_organizacion_title">Registro Organización</string>
+    <string name="registro_organizacion_nombre">Nombre de Organización</string>
+    <string name="registro_organizacion_causa">¿Cuál es su causa?</string>
+    <string name="registro_organizacion_personas">¿Cuántas personas atienden?</string>
+    <string name="registro_organizacion_descripción">Misión de su organización</string>
+
     <string name="title_solicitud">Solicitud</string>
     <string name="title_categoria">Elige categoria</string>
     <string name="verdura">Verdura</string>

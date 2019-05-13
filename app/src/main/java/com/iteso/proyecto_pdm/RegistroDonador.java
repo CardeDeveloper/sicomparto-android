@@ -23,9 +23,8 @@ import java.util.Map;
 
 public class RegistroDonador extends AppCompatActivity {
 
-    //Firestore db;
 
-    String initialDocRef = "donors/";
+    String initialDocRef = "usuarios/";
     private DocumentReference docRef;
 
     Button next;
@@ -65,7 +64,7 @@ public class RegistroDonador extends AppCompatActivity {
                     donor.put(getString(R.string.direccion), direccion.getText().toString());
                     donor.put(getString(R.string.codigo_postal), codigoPostal.getText().toString());
 
-                    docRef.set(donor).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    docRef.update(donor).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
                             Intent intent = new Intent(RegistroDonador.this, RegistroDonador2.class);

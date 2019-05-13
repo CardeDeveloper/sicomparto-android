@@ -2,6 +2,7 @@ package com.iteso.proyecto_pdm;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -29,6 +30,8 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
@@ -36,8 +39,15 @@ import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity {
+
     Button login;
     EditText correo,pass;
     CallbackManager mCallbackManager;
@@ -219,14 +229,39 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    protected  void login(String token){
+    protected  void login(final String token){
         SharedPreferences sharedPreferences =
                 getSharedPreferences(Constants.MAIN_PACKAGE, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(Constants.TOKEN_PREFERENCE, token);
         editor.apply(); //apply asincrono , commit sincrono*/
-        Log.e("usuario_token", token);
-        Intent intent = new Intent(LoginActivity.this, Activity_Dashboard.class);
-        startActivity(intent);
+        Log.e(Constants.USUARIO_TOKEN, token);
+
+        final Map<String, Object> document = new HashMap<>();
+
+        String strDocRef = Constants.USUARIOS + token;
+
+        final DocumentReference documentReference = FirebaseFirestore.getInstance().document(strDocRef);
+
+        documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                if(! documentSnapshot.contains(Constants.UID)){
+                    document.put(Constants.UID, token);
+
+                    documentReference.set(document).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast toast1 = Toast.makeText(getApplicationContext(), "Something went wrong", Toast.LENGTH_LONG);
+                            toast1.show();
+                        }
+                    });
+                }
+                Intent intent = new Intent(LoginActivity.this, Activity_Dashboard.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }

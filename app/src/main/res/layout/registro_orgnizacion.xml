@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegistroDonador"
+    >
+
+    <!---<android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_anchorGravity="left|top"
+        app:srcCompat="@mipmap/flecha_izquierda"
+        /> -->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="137dp"
+        android:columnCount="2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_left_margin"
+            android:layout_marginTop="@dimen/activity_top_margin"
+            android:text="@string/registro_organizacion_title"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="158dp"
+            android:layout_height="match_parent"
+
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:src="@mipmap/recibir_background" />
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_activity_registro_donador_nombre"
+        android:layout_marginLeft="@dimen/activity_left_margin"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"/>
+    <EditText
+        android:id="@+id/activity_registro_organizacion_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nombre"
+        android:textColorHint="@color/lightBlack"
+        android:inputType="textCapWords"
+        android:layout_marginTop="@dimen/activity_top_margin"
+        android:layout_marginLeft="@dimen/activity_left_margin"
+        android:layout_marginRight="@dimen/activity_left_margin"
+        android:layout_gravity=""/>
+
+    <EditText
+        android:id="@+id/activity_registro_organizacion_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:layout_marginLeft="@dimen/activity_left_margin"
+        android:layout_marginRight="@dimen/activity_left_margin"
+        android:layout_marginTop="@dimen/activity_top_margin"
+        android:hint="@string/email"
+        android:textColorHint="@color/lightBlack"/>
+
+    <EditText
+        android:id="@+id/activity_registro_organizacion_telefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:layout_marginLeft="@dimen/activity_left_margin"
+        android:layout_marginRight="@dimen/activity_left_margin"
+        android:layout_marginTop="@dimen/activity_top_margin"
+        android:hint="@string/telefono"
+        android:textColorHint="@color/lightBlack"
+        android:layout_gravity=""/>
+
+    <EditText
+        android:id="@+id/activity_registro_organizacion_direccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textCapWords"
+        android:layout_marginLeft="@dimen/activity_left_margin"
+        android:layout_marginRight="@dimen/activity_left_margin"
+        android:layout_marginTop="@dimen/activity_top_margin"
+        android:hint="@string/direccion"
+        android:textColorHint="@color/lightBlack"/>
+
+    <EditText
+        android:id="@+id/activity_registro_organizacion_codigoPostal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:layout_marginLeft="@dimen/activity_left_margin"
+        android:layout_marginRight="@dimen/activity_left_margin"
+        android:layout_marginTop="@dimen/activity_top_margin"
+        android:hint="@string/codigo_postal"
+        android:textColorHint="@color/lightBlack"/>
+
+    <Button
+        android:id="@+id/activity_registro_organizacion2_next"
+        android:layout_width="53dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/activity_top_margin"
+        android:layout_gravity="end|bottom"
+        android:background="@drawable/btn_comenzar_background"
+        android:drawableStart="@mipmap/arrow_next" />
+
+
+
+</LinearLayout>

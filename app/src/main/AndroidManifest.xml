@@ -49,7 +49,9 @@
         <activity
             android:name=".Activity_Donar"
             android:label="@string/title_activity__donar" />
-        <activity android:name=".RegistroDonador" />
+        <activity
+            android:name=".RegistroDonador"
+            android:windowSoftInputMode="adjustResize"/>
         <activity android:name=".Activity_queSoy" />
         <activity android:name=".RegistroDonador2" />
         <activity android:name=".RegistroDonador22" />
