@@ -23,9 +23,8 @@ import java.util.Map;
 
 public class RegistroDonador extends AppCompatActivity {
 
-    //Firestore db;
 
-    String initialDocRef = "donors/";
+    String initialDocRef = "usuarios/";
     private DocumentReference docRef;
 
     Button next;
@@ -55,7 +54,8 @@ public class RegistroDonador extends AppCompatActivity {
                 if(nombre.getText().length() > 0 && email.getText().length() > 0 && telefono.getText().length() > 0
                         && direccion.getText().length() > 0 && codigoPostal.getText().length() > 0){
 
-                    initialDocRef += nombre.getText().toString();
+                    //initialDocRef += nombre.getText().toString();
+                    initialDocRef += "kfrdeG3sjBIyYjBF3ne0";
                     docRef = FirebaseFirestore.getInstance().document(initialDocRef);
 
                     //llenando firestore
@@ -65,7 +65,7 @@ public class RegistroDonador extends AppCompatActivity {
                     donor.put(getString(R.string.direccion), direccion.getText().toString());
                     donor.put(getString(R.string.codigo_postal), codigoPostal.getText().toString());
 
-                    docRef.set(donor).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    docRef.update(donor).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
                             Toast toast2 = Toast.makeText(getApplicationContext(), "Info stored on Firebase!", Toast.LENGTH_LONG);
@@ -83,8 +83,8 @@ public class RegistroDonador extends AppCompatActivity {
                     //ApiFuture<String> result = docRef.set(donor);
 
 
-                    //Intent intent = new Intent(RegistroDonador.this, RegistroDonador2.class);
-                    //startActivity(intent);
+                    Intent intent = new Intent(RegistroDonador.this, RegistroDonador2.class);
+                    startActivity(intent);
 
                 }
                 else {

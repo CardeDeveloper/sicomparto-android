@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 
 public class Activity_Categorias extends AppCompatActivity {
 
+
     ImageButton next;
     CheckBox verdura, lacteos, cereales, carnesRojas, carnesBlancas, fastFood, cremas, condimentos,
             cafe, pasteles, enlatados, agua, dulces, jugos, leguminosas, procesados;
@@ -44,7 +45,7 @@ public class Activity_Categorias extends AppCompatActivity {
 
                 //save checkboxes state into shared preferences
                 SharedPreferences sharedPreferences =
-                        getSharedPreferences("com.iteso.proyecto_pdm.CATEGORIAS", MODE_PRIVATE);
+                        getSharedPreferences(Constants.SP_CATEGORIAS, MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
 
                 editor.putBoolean(getString(R.string.verdura), verdura.isChecked());

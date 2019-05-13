@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/activity_left_margin"
             android:layout_marginTop="@dimen/activity_top_margin"
-            android:text="@string/title_activity_registro_donador"
+            android:text="@string/registro_organizacion_title"
             android:textColor="@android:color/black"
             android:textSize="30sp"
             android:textStyle="bold" />
@@ -42,8 +42,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="0dp"
-            android:background="@mipmap/donar_background"
-            android:src="@mipmap/donar_background" />
+            android:src="@mipmap/recibir_background" />
 
     </RelativeLayout>
     <TextView
@@ -55,7 +54,7 @@
         android:textColor="@android:color/black"
         android:textStyle="bold"/>
     <EditText
-        android:id="@+id/activity_regDon_nombre"
+        android:id="@+id/activity_registro_organizacion_nombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/nombre"
@@ -67,7 +66,7 @@
         android:layout_gravity=""/>
 
     <EditText
-        android:id="@+id/activity_regDon_email"
+        android:id="@+id/activity_registro_organizacion_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
@@ -78,7 +77,7 @@
         android:textColorHint="@color/lightBlack"/>
 
     <EditText
-        android:id="@+id/activity_regDon_telefono"
+        android:id="@+id/activity_registro_organizacion_telefono"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="phone"
@@ -90,7 +89,7 @@
         android:layout_gravity=""/>
 
     <EditText
-        android:id="@+id/activity_regDon_direccion"
+        android:id="@+id/activity_registro_organizacion_direccion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textCapWords"
@@ -101,7 +100,7 @@
         android:textColorHint="@color/lightBlack"/>
 
     <EditText
-        android:id="@+id/activity_regDon_codigoPostal"
+        android:id="@+id/activity_registro_organizacion_codigoPostal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
@@ -112,7 +111,7 @@
         android:textColorHint="@color/lightBlack"/>
 
     <Button
-        android:id="@+id/activity_regDon_arrowNext"
+        android:id="@+id/activity_registro_organizacion2_next"
         android:layout_width="53dp"
         android:layout_height="50dp"
         android:layout_marginTop="@dimen/activity_top_margin"

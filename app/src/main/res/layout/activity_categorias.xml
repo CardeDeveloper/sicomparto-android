@@ -350,15 +350,16 @@
 
         </LinearLayout>
 
-        <ImageButton
+        <Button
             android:id="@+id/activity_solicitud_categorias_next"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:src="@drawable/ic_baseline_arrow_forward_24px"
-            android:backgroundTint="@color/greenMain"
-            />
-
+            android:layout_width="53dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/activity_top_margin"
+            android:layout_gravity="end|bottom"
+            android:background="@drawable/btn_comenzar_background"
+            android:drawableStart="@mipmap/arrow_next"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
 
     </LinearLayout>
 
