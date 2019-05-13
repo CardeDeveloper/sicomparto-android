@@ -11,6 +11,9 @@ public class Constants {
     public static final int DONACION_CALENDAR = 3;
     public static final int DONACION_TIME = 4;
 
+    public static final String UID = "UID";
+    public static final String USUARIO_TOKEN = "usuario_token";
+
     //document references Firebase
     public static final String USUARIOS = "usuarios/";
     public static final String REGISTROS = "registros/";

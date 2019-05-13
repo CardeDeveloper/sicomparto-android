@@ -47,7 +47,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity {
-    public static final String UID = "UID";
+
     Button login;
     EditText correo,pass;
     CallbackManager mCallbackManager;
@@ -235,7 +235,7 @@ public class LoginActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(Constants.TOKEN_PREFERENCE, token);
         editor.apply(); //apply asincrono , commit sincrono*/
-        Log.e("usuario_token", token);
+        Log.e(Constants.USUARIO_TOKEN, token);
 
         final Map<String, Object> document = new HashMap<>();
 
@@ -246,8 +246,8 @@ public class LoginActivity extends AppCompatActivity {
         documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
-                if(! documentSnapshot.contains(UID)){
-                    document.put(UID, token);
+                if(! documentSnapshot.contains(Constants.UID)){
+                    document.put(Constants.UID, token);
 
                     documentReference.set(document).addOnFailureListener(new OnFailureListener() {
                         @Override
@@ -257,8 +257,6 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     });
                 }
-                Toast toast1 = Toast.makeText(getApplicationContext(), "Stored", Toast.LENGTH_LONG);
-                toast1.show();
                 Intent intent = new Intent(LoginActivity.this, Activity_Dashboard.class);
                 startActivity(intent);
             }
