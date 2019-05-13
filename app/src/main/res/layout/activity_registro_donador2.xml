@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_margin="@dimen/activity_general_margin"
     tools:context=".RegistroDonador2">
 
     <TextView
@@ -76,5 +77,29 @@
         android:layout_gravity="end|bottom"
         android:background="@drawable/btn_comenzar_background"
         android:drawableStart="@mipmap/arrow_next" />
+        android:id="@+id/btnCargarImgEnLaMano"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:background="@drawable/btn_comenzar_background"
+        android:onClick="onclick"
+        android:text="@string/Selecciona_imagen"
+        android:textSize="10dp" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            android:id="@+id/activity_regDon_arrowNext"
+            android:layout_width="53dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/activity_top_margin"
+            android:layout_gravity="end|bottom"
+            android:background="@drawable/btn_comenzar_background"
+            android:drawableStart="@mipmap/arrow_next"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
 
 </LinearLayout>

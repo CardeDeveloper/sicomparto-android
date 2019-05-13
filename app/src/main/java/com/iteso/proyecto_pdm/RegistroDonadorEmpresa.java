@@ -15,7 +15,7 @@ public class RegistroDonadorEmpresa extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_donador_empresa);
 
-        next = findViewById(R.id.activity_regDon_arrowNext);
+        next = findViewById(R.id.activity_regDon_Empresa_arrowNext);
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override

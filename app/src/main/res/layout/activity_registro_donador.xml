@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_margin="@dimen/activity_general_margin"
     tools:context=".RegistroDonador"
     >
 
@@ -59,7 +60,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/nombre"
-        android:textColorHint="@color/greenMain"
+        android:textColorHint="@color/lightBlack"
         android:inputType="textCapWords"
         android:layout_marginTop="@dimen/activity_top_margin"
         android:layout_marginLeft="@dimen/activity_left_margin"
@@ -75,7 +76,7 @@
         android:layout_marginRight="@dimen/activity_left_margin"
         android:layout_marginTop="@dimen/activity_top_margin"
         android:hint="@string/email"
-        android:textColorHint="@color/greenMain"/>
+        android:textColorHint="@color/lightBlack"/>
 
     <EditText
         android:id="@+id/activity_regDon_telefono"
@@ -86,7 +87,7 @@
         android:layout_marginRight="@dimen/activity_left_margin"
         android:layout_marginTop="@dimen/activity_top_margin"
         android:hint="@string/telefono"
-        android:textColorHint="@color/greenMain"
+        android:textColorHint="@color/lightBlack"
         android:layout_gravity=""/>
 
     <EditText
@@ -98,7 +99,7 @@
         android:layout_marginRight="@dimen/activity_left_margin"
         android:layout_marginTop="@dimen/activity_top_margin"
         android:hint="@string/direccion"
-        android:textColorHint="@color/greenMain"/>
+        android:textColorHint="@color/lightBlack"/>
 
     <EditText
         android:id="@+id/activity_regDon_codigoPostal"
@@ -109,16 +110,24 @@
         android:layout_marginRight="@dimen/activity_left_margin"
         android:layout_marginTop="@dimen/activity_top_margin"
         android:hint="@string/codigo_postal"
-        android:textColorHint="@color/greenMain"/>
+        android:textColorHint="@color/lightBlack"/>
 
-    <Button
-        android:id="@+id/activity_regDon_arrowNext"
-        android:layout_width="53dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="@dimen/activity_top_margin"
-        android:layout_gravity="end|bottom"
-        android:background="@drawable/btn_comenzar_background"
-        android:drawableStart="@mipmap/arrow_next" />
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            android:id="@+id/activity_regDon_arrowNext"
+            android:layout_width="53dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/activity_top_margin"
+            android:layout_gravity="end|bottom"
+            android:background="@drawable/btn_comenzar_background"
+            android:drawableStart="@mipmap/arrow_next"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
 
 
 

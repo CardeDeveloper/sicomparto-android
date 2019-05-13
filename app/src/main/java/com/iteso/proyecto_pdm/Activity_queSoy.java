@@ -37,8 +37,7 @@ public class Activity_queSoy extends AppCompatActivity {
                     comenzar.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Intent intent = new Intent(Activity_queSoy.this, RegistroDonadorEmpresa.class);
-                            startActivity(intent);
+                            goEmpresa();
                         }
                     });
                 break;
@@ -48,13 +47,20 @@ public class Activity_queSoy extends AppCompatActivity {
                     comenzar.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Intent intent = new Intent(Activity_queSoy.this, RegistroDonador.class);
-                            startActivity(intent);
+                            goPersona();
                         }
                     });
                 break;
         }
+    }
 
+    public void goEmpresa(){
+        Intent intent = new Intent(Activity_queSoy.this, RegistroDonadorEmpresa.class);
+        startActivity(intent);
+    }
 
+    public void goPersona(){
+        Intent intent = new Intent(Activity_queSoy.this, RegistroDonador.class);
+        startActivity(intent);
     }
 }
