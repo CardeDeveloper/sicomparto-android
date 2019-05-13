@@ -21,4 +21,6 @@ public class Constants {
     //document references Firebase
     public static final String USUARIOS = "usuarios/";
     public static final String REGISTROS = "registros/";
+
+    public static  int count = 0;
 }

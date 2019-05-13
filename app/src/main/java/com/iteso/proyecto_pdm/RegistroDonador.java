@@ -1,6 +1,7 @@
 package com.iteso.proyecto_pdm;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -24,7 +25,7 @@ import java.util.Map;
 public class RegistroDonador extends AppCompatActivity {
 
 
-    String initialDocRef = "usuarios/";
+    String initialDocRef = Constants.USUARIOS;
     private DocumentReference docRef;
 
     Button next;
@@ -54,7 +55,10 @@ public class RegistroDonador extends AppCompatActivity {
                 if(nombre.getText().length() > 0 && email.getText().length() > 0 && telefono.getText().length() > 0
                         && direccion.getText().length() > 0 && codigoPostal.getText().length() > 0){
 
-                    initialDocRef += nombre.getText().toString();
+                    SharedPreferences sharedPreferences = getSharedPreferences(Constants.MAIN_PACKAGE, MODE_PRIVATE);
+                    String document = sharedPreferences.getString(Constants.TOKEN_PREFERENCE, null);
+
+                    initialDocRef += document;
                     docRef = FirebaseFirestore.getInstance().document(initialDocRef);
 
                     //llenando firestore

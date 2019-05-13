@@ -13,12 +13,14 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.gson.JsonObject;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 
-public class Activity_Solicitud_Alimento extends AppCompatActivity {
+public class ActivityDonacionAlimento extends AppCompatActivity {
 
     ImageButton categories;
     Button next;
@@ -27,7 +29,7 @@ public class Activity_Solicitud_Alimento extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_solicitud_alimento);
+        setContentView(R.layout.activity_donacion_alimento);
 
         next = findViewById(R.id.activity_solicitud_next);
         categories = findViewById(R.id.activity_solicitud_choose_category);
@@ -39,7 +41,8 @@ public class Activity_Solicitud_Alimento extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Activity_Solicitud_Alimento.this, Activity_Dashboard.class);
+                Intent intent = new Intent(ActivityDonacionAlimento.this, Activity_Dashboard.class);
+                Toast.makeText(getApplicationContext(), "Donación registrada exitosamente", Toast.LENGTH_LONG).show();
                 startActivity(intent);
                 finish();
             }
@@ -48,7 +51,7 @@ public class Activity_Solicitud_Alimento extends AppCompatActivity {
         categories.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Activity_Solicitud_Alimento.this, Activity_Categorias.class);
+                Intent intent = new Intent(ActivityDonacionAlimento.this, Activity_Categorias.class);
                 startActivity(intent);
                 finish();
             }
@@ -66,6 +69,7 @@ public class Activity_Solicitud_Alimento extends AppCompatActivity {
         Boolean carnesRojasValue = sharedPreferences.getBoolean(getString(R.string.carnes_rojas), true);
         Boolean lacteosValue = sharedPreferences.getBoolean(getString(R.string.lacteos), true);
 
+
         carnesRojasBox.setChecked(carnesRojasValue);
         lacteosBox.setChecked(lacteosValue);
 
@@ -81,17 +85,14 @@ public class Activity_Solicitud_Alimento extends AppCompatActivity {
             categories.put("lacteos", false);
 
 
-        SharedPreferences sPreferences = getSharedPreferences(Constants.MAIN_PACKAGE, MODE_PRIVATE);
-        String document = sPreferences.getString(Constants.TOKEN_PREFERENCE, null);
-
-        String path = Constants.USUARIOS + document + "/" + Constants.REGISTROS + Constants.count;
+        String path = Constants.REGISTROS + Constants.count;
 
         DocumentReference documentReference = FirebaseFirestore.getInstance().document(path);
 
         documentReference.update(categories).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
-                Toast.makeText(getApplicationContext(), "Solicitud Exitosa", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Donacion exitosa", Toast.LENGTH_LONG).show();
                 Constants.count ++;
             }
         });

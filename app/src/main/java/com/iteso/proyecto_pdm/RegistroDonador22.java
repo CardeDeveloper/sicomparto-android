@@ -29,6 +29,9 @@ import com.facebook.internal.Utility;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.common.base.Utf8;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FieldValue;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
@@ -36,6 +39,8 @@ import com.google.firebase.storage.UploadTask;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 
 import io.grpc.okhttp.internal.Util;
@@ -318,6 +323,19 @@ public class RegistroDonador22 extends AppCompatActivity {
                                     SharedPreferences.Editor editor = sharedPreferences.edit();
                                     editor.putString(Constants.FOTO_DE_VUELTA, uri.toString());
                                     editor.apply();
+
+
+                                    SharedPreferences sPreferences = getSharedPreferences(Constants.MAIN_PACKAGE, MODE_PRIVATE);
+                                    String document = sPreferences.getString(Constants.TOKEN_PREFERENCE, null);
+
+                                    String path = Constants.USUARIOS + document;
+                                    DocumentReference mdocRef = FirebaseFirestore.getInstance().document(path);
+
+                                    Map<String, Object> images = new HashMap<>();
+
+                                    images.put("ImageReverso", uri.toString());
+
+                                    mdocRef.update(images);
                                 }
                             });
 

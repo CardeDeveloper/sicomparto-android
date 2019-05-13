@@ -27,12 +27,16 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 
 import static android.Manifest.permission.CAMERA;
@@ -66,7 +70,7 @@ public class RegistroDonador23 extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RegistroDonador23.this, RegistroDonador3.class);
+                Intent intent = new Intent(RegistroDonador23.this, NewDonationActivity.class);
                 startActivity(intent);
             }
         });
@@ -313,6 +317,18 @@ public class RegistroDonador23 extends AppCompatActivity {
                                     SharedPreferences.Editor editor = sharedPreferences.edit();
                                     editor.putString(Constants.FOTO_EN_MANO, uri.toString());
                                     editor.apply();
+
+                                    SharedPreferences sPreferences = getSharedPreferences(Constants.MAIN_PACKAGE, MODE_PRIVATE);
+                                    String document = sPreferences.getString(Constants.TOKEN_PREFERENCE, null);
+
+                                    String path = Constants.USUARIOS + document;
+                                    DocumentReference mdocRef = FirebaseFirestore.getInstance().document(path);
+
+                                    Map<String, Object> images = new HashMap<>();
+
+                                    images.put("ImageEnMano", uri.toString());
+
+                                    mdocRef.update(images);
                                 }
                             });
 

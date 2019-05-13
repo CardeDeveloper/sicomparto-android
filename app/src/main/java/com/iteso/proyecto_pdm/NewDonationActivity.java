@@ -7,21 +7,31 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
+
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class NewDonationActivity extends AppCompatActivity {
 
     FloatingActionButton next;
+    EditText calendar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_donation);
+        calendar = findViewById(R.id.activity_donacion_calendar);
+
         next = findViewById(R.id.btnNext);
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(NewDonationActivity.this, Activity_Dashboard.class);
+                Intent intent = new Intent(NewDonationActivity.this, ActivityDonacionAlimento.class);
                 startActivity(intent);
             }
         });
@@ -39,6 +49,23 @@ public class NewDonationActivity extends AppCompatActivity {
                 int day = data.getExtras().getInt("DAY");
                 int month = data.getExtras().getInt("MONTH");
                 int year = data.getExtras().getInt("YEAR");
+
+                Map<String, Object> map = new HashMap<>();
+
+                map.put("day", day);
+                map.put("month", month);
+                map.put("year", year);
+
+
+                String date = String.format("%02d/%02d/%d", day, month, year);
+
+                calendar.setText(date);
+
+                String path = Constants.REGISTROS + Constants.count;
+
+                DocumentReference documentReference = FirebaseFirestore.getInstance().document(path);
+
+                documentReference.set(map);
 
                 //TODO: save in firebase
             }

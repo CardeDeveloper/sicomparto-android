@@ -70,27 +70,12 @@
 
 
 
-    <Button
-        android:id="@+id/activity_regDon2_arrowNext"
-        android:layout_width="53dp"
-        android:layout_height="50dp"
-        android:layout_gravity="end|bottom"
-        android:background="@drawable/btn_comenzar_background"
-        android:drawableStart="@mipmap/arrow_next" />
-        android:id="@+id/btnCargarImgEnLaMano"
-        android:layout_width="wrap_content"
-        android:layout_height="36dp"
-        android:background="@drawable/btn_comenzar_background"
-        android:onClick="onclick"
-        android:text="@string/Selecciona_imagen"
-        android:textSize="10dp" />
-
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
         <Button
-            android:id="@+id/activity_regDon_arrowNext"
+            android:id="@+id/activity_regDon2_arrowNext"
             android:layout_width="53dp"
             android:layout_height="50dp"
             android:layout_marginTop="@dimen/activity_top_margin"

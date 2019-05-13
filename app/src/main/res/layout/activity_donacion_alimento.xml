@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/activity_general_margin">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nueva Donación"
+        android:textSize="@dimen/activity_solicitud_title"
+        android:textColor="@color/greenMain"
+        android:paddingBottom="13dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tipo de alimento a donar"
+        android:textSize="@dimen/activity_solicitud_secondary"
+        android:textColor="@color/lightBlack"
+        android:paddingBottom="40dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_categoria"
+            android:textStyle="bold"
+            android:textSize="19dp"
+            android:paddingBottom="27dp"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/activity_solicitud_choose_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_expand_more_24px"
+            android:backgroundTint="@color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/lacteos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/greenMain"
+            android:hint="Lacteos"
+            android:checked="true"
+            android:layout_weight="1"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/lacteos"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/carnes_rojas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/greenMain"
+            android:hint="Carnes Rojas"
+            android:checked="true"
+            android:layout_weight="1"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/steak"/>
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/activity_solicitud_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Describe alimentos y cantidades"
+        android:textColor="@color/mainBlack"
+        android:gravity="top"
+        android:paddingTop="54dp"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            android:id="@+id/activity_solicitud_next"
+            android:layout_width="53dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/activity_top_margin"
+            android:layout_gravity="end|bottom"
+            android:background="@drawable/btn_comenzar_background"
+            android:drawableStart="@mipmap/arrow_next"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

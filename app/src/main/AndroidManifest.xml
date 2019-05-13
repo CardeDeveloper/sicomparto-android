@@ -62,6 +62,7 @@
         <activity android:name=".Activity_Categorias" />
         <activity android:name=".ActivityCalendar" />
         <activity android:name=".RegistroDonadorEmpresa" />
+        <activity android:name=".ActivityDonacionAlimento"/>
 
         <service android:name=".services.MyFirebaseMessagingService">
             <intent-filter>
