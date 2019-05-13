@@ -52,6 +52,8 @@
         <activity android:name=".RegistroDonador" />
         <activity android:name=".Activity_queSoy" />
         <activity android:name=".RegistroDonador2" />
+        <activity android:name=".RegistroDonador22" />
+        <activity android:name=".RegistroDonador23" />
         <activity android:name=".RegistroDonador3" />
         <activity android:name=".Activity_Solicitud_Alimento" />
         <activity android:name=".Activity_Solicitud_Horario" />

@@ -10,6 +10,7 @@ import android.graphics.BitmapFactory;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.provider.Settings;
@@ -18,43 +19,35 @@ import android.support.annotation.RequiresApi;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import java.io.File;
-import java.net.URI;
-import java.util.UUID;
-
-import static android.Manifest.permission.CAMERA;
-import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
-import static android.support.v4.content.FileProvider.getUriForFile;
-
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-
+import com.facebook.internal.Utility;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.common.base.Utf8;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-public class RegistroDonador2 extends AppCompatActivity {
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.util.UUID;
 
+import io.grpc.okhttp.internal.Util;
+
+import static android.Manifest.permission.CAMERA;
+import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
+
+public class RegistroDonador22 extends AppCompatActivity {
 
     //Firebase
     FirebaseStorage storage;
     StorageReference storageReference;
-
-
-
 
     Button next;
 
@@ -64,41 +57,39 @@ public class RegistroDonador2 extends AppCompatActivity {
     final int COD_SELECCIONA=10;
     final int COD_FOTO=20;
 
-    Button botonCargar1;
-    ImageView frente;
-    String path1;
+    Button botonCargar2;
+    ImageView vuelta;
+    String path2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registro_donador2);
+        setContentView(R.layout.activity_registro_donador22);
 
-        next = findViewById(R.id.activity_regDon2_arrowNext);
+        next = findViewById(R.id.activity_regDon22_arrowNext);
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RegistroDonador2.this, RegistroDonador22.class);
+                Intent intent = new Intent(RegistroDonador22.this, RegistroDonador23.class);
                 startActivity(intent);
             }
         });
 
-        frente= (ImageView) findViewById(R.id.imagemIdFrente);
-        botonCargar1= (Button) findViewById(R.id.btnCargarImgFrente);
+        vuelta= (ImageView) findViewById(R.id.imagemIdVuelta);
+
+        botonCargar2= (Button) findViewById(R.id.btnCargarImgVuelta);
 
         if(validaPermisos()){
-            botonCargar1.setEnabled(true);
+            botonCargar2.setEnabled(true);
         }else{
-            botonCargar1.setEnabled(false);
+            botonCargar2.setEnabled(false);
         }
+
         storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference();
 
-
-
     }
-
-
 
     private boolean validaPermisos() {
 
@@ -128,7 +119,7 @@ public class RegistroDonador2 extends AppCompatActivity {
         if(requestCode==100){
             if(grantResults.length==2 && grantResults[0]==PackageManager.PERMISSION_GRANTED
                     && grantResults[1]==PackageManager.PERMISSION_GRANTED){
-                botonCargar1.setEnabled(true);
+                botonCargar2.setEnabled(true);
             }else{
                 solicitarPermisosManual();
             }
@@ -138,7 +129,7 @@ public class RegistroDonador2 extends AppCompatActivity {
 
     private void solicitarPermisosManual() {
         final CharSequence[] opciones={"si","no"};
-        final AlertDialog.Builder alertOpciones=new AlertDialog.Builder(RegistroDonador2.this);
+        final AlertDialog.Builder alertOpciones=new AlertDialog.Builder(RegistroDonador22.this);
         alertOpciones.setTitle("¿Desea configurar los permisos de forma manual?");
         alertOpciones.setItems(opciones, new DialogInterface.OnClickListener() {
             @Override
@@ -159,7 +150,7 @@ public class RegistroDonador2 extends AppCompatActivity {
     }
 
     private void cargarDialogoRecomendacion() {
-        AlertDialog.Builder dialogo=new AlertDialog.Builder(RegistroDonador2.this);
+        AlertDialog.Builder dialogo=new AlertDialog.Builder(RegistroDonador22.this);
         dialogo.setTitle("Permisos Desactivados");
         dialogo.setMessage("Debe aceptar los permisos para el correcto funcionamiento de la App");
 
@@ -180,7 +171,7 @@ public class RegistroDonador2 extends AppCompatActivity {
     private void cargarImagen() {
 
         final CharSequence[] opciones={"Tomar Foto","Cargar Imagen","Cancelar"};
-        final AlertDialog.Builder alertOpciones=new AlertDialog.Builder(RegistroDonador2.this);
+        final AlertDialog.Builder alertOpciones=new AlertDialog.Builder(RegistroDonador22.this);
         alertOpciones.setTitle("Seleccione una Opción");
         alertOpciones.setItems(opciones, new DialogInterface.OnClickListener() {
             @Override
@@ -215,10 +206,10 @@ public class RegistroDonador2 extends AppCompatActivity {
         }
 
 
-        path1=Environment.getExternalStorageDirectory()+
+        path2=Environment.getExternalStorageDirectory()+
                 File.separator+RUTA_IMAGEN+File.separator+nombreImagen;
 
-        File imagen=new File(path1);
+        File imagen=new File(path2);
 
         Intent intent=null;
         intent=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -245,22 +236,22 @@ public class RegistroDonador2 extends AppCompatActivity {
             switch (requestCode){
                 case COD_SELECCIONA:
                     Uri miPath=data.getData();
-                    frente.setImageURI(miPath);
-                    Log.i("Ruta de almacenamiento","Path local 1: "+ miPath);
+                    vuelta.setImageURI(miPath);
+                    Log.i("Ruta de almacenamiento","Path local 2: "+ miPath);
                     uploadImage(miPath);
                     break;
 
                 case COD_FOTO:
-                    MediaScannerConnection.scanFile(this, new String[]{path1}, null,
+                    MediaScannerConnection.scanFile(this, new String[]{path2}, null,
                             new MediaScannerConnection.OnScanCompletedListener() {
                                 @Override
                                 public void onScanCompleted(String path, Uri uri) {
-                                    Log.i("Ruta de almacenamiento","Path local 1: "+path);
+                                    Log.i("Ruta de almacenamiento","Path local 2: "+path);
                                 }
                             });
 
-                    Bitmap bitmap= BitmapFactory.decodeFile(path1);
-                    frente.setImageBitmap(bitmap);
+                    Bitmap bitmap= BitmapFactory.decodeFile(path2);
+                    vuelta.setImageBitmap(bitmap);
 
                     break;
             }
@@ -283,7 +274,7 @@ public class RegistroDonador2 extends AppCompatActivity {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                             progressDialog.dismiss();
-                            Toast.makeText(RegistroDonador2.this, "Uploaded", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegistroDonador22.this, "Uploaded", Toast.LENGTH_SHORT).show();
 
                             ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                 @Override
@@ -295,7 +286,7 @@ public class RegistroDonador2 extends AppCompatActivity {
                                     SharedPreferences sharedPreferences =
                                             getSharedPreferences(Constants.COM_ITESO_PROYECTO_PDM_FOTOS, MODE_PRIVATE);
                                     SharedPreferences.Editor editor = sharedPreferences.edit();
-                                    editor.putString(Constants.FOTO_DE_FRENTE, uri.toString());
+                                    editor.putString(Constants.FOTO_DE_VUELTA, uri.toString());
                                     editor.apply();
                                 }
                             });
@@ -306,7 +297,7 @@ public class RegistroDonador2 extends AppCompatActivity {
                         @Override
                         public void onFailure(@NonNull Exception e) {
                             progressDialog.dismiss();
-                            Toast.makeText(RegistroDonador2.this, "Failed "+e.getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegistroDonador22.this, "Failed "+e.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     })
                     .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
@@ -325,7 +316,7 @@ public class RegistroDonador2 extends AppCompatActivity {
                                     SharedPreferences sharedPreferences =
                                             getSharedPreferences(Constants.COM_ITESO_PROYECTO_PDM_FOTOS, MODE_PRIVATE);
                                     SharedPreferences.Editor editor = sharedPreferences.edit();
-                                    editor.putString(Constants.FOTO_DE_FRENTE, uri.toString());
+                                    editor.putString(Constants.FOTO_DE_VUELTA, uri.toString());
                                     editor.apply();
                                 }
                             });
@@ -334,4 +325,6 @@ public class RegistroDonador2 extends AppCompatActivity {
                     });
         }
     }
+
+
 }
