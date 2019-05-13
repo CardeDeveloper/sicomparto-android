@@ -39,7 +39,7 @@ public class SplashActivity extends AppCompatActivity {
 
             }
         };
-        Log.e("token firebase message",  FirebaseInstanceId.getInstance().getToken());
+        //Log.e("token firebase message",  FirebaseInstanceId.getInstance().getToken());
 
         Timer timer = new Timer();
         timer.schedule(task, 2000);
