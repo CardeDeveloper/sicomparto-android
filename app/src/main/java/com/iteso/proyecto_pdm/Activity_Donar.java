@@ -33,12 +33,6 @@ public class Activity_Donar extends AppCompatActivity {
                     Intent intent = new Intent(Activity_Donar.this, Activity_queSoy.class);
                     startActivity(intent);
                     return true;
-                case R.id.navigation_info:
-                    mTextMessage.setText(R.string.title_info);
-                    return true;
-                case R.id.navigation_perfil:
-                    mTextMessage.setText(R.string.title_perfil);
-                    return true;
             }
             return false;
         }

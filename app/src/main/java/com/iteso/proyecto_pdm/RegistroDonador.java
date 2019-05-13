@@ -68,8 +68,8 @@ public class RegistroDonador extends AppCompatActivity {
                     docRef.set(donor).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
-                            Toast toast2 = Toast.makeText(getApplicationContext(), "Info stored on Firebase!", Toast.LENGTH_LONG);
-                            toast2.show();
+                            Intent intent = new Intent(RegistroDonador.this, RegistroDonador2.class);
+                            startActivity(intent);
                         }
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
@@ -78,13 +78,6 @@ public class RegistroDonador extends AppCompatActivity {
                             toast1.show();
                         }
                     });
-
-
-                    //ApiFuture<String> result = docRef.set(donor);
-
-
-                    //Intent intent = new Intent(RegistroDonador.this, RegistroDonador2.class);
-                    //startActivity(intent);
 
                 }
                 else {
