@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+
+import com.google.firebase.iid.FirebaseInstanceId;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -36,8 +39,12 @@ public class SplashActivity extends AppCompatActivity {
 
             }
         };
+        Log.e("token firebase message",  FirebaseInstanceId.getInstance().getToken());
 
         Timer timer = new Timer();
         timer.schedule(task, 2000);
+
+
+
     }
 }
