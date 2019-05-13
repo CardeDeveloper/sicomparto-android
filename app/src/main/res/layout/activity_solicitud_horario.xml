@@ -29,21 +29,6 @@
         android:focusableInTouchMode="false"
         android:onClick="onClick"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="¿A qué hora?"
-        android:textColor="@color/mainBlack"
-        android:textStyle="bold"
-        android:textSize="@dimen/activity_solicitud_secondary"/>
-
-    <EditText
-        android:id="@+id/activity_solicitud_horario_time"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Danos un rango de tiempo"
-        android:focusableInTouchMode="false"
-        android:onClick="onClick"/>
 
     <RelativeLayout
         android:layout_width="match_parent"

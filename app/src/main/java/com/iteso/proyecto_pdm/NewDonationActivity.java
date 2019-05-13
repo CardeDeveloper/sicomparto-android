@@ -18,7 +18,7 @@ import java.util.Map;
 
 public class NewDonationActivity extends AppCompatActivity {
 
-    FloatingActionButton next;
+    Button next;
     EditText calendar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
