@@ -58,7 +58,7 @@ public class RegistroOrganizacion extends AppCompatActivity {
                     docRef = FirebaseFirestore.getInstance().document(initialDocRef);
 
                     //llenando firestore
-                    org.put("Tipo", "Organización");
+                    org.put("TipoOrganizacion", "True");
                     org.put("NombreUs", nombre.getText().toString());
                     org.put("EmailOrg", email.getText().toString());
                     org.put("TelefonoOrg", telefono.getText().toString());

@@ -62,7 +62,7 @@ public class RegistroDonador extends AppCompatActivity {
                     docRef = FirebaseFirestore.getInstance().document(initialDocRef);
 
                     //llenando firestore
-                    donor.put("Tipo", "Persona");
+                    donor.put("TipoDonador", "Persona");
                     donor.put(getString(R.string.nombre), nombre.getText().toString());
                     donor.put(getString(R.string.email), email.getText().toString());
                     donor.put(getString(R.string.telefono), telefono.getText().toString());

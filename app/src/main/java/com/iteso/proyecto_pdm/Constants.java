@@ -11,9 +11,14 @@ public class Constants {
     public static final String SP_CATEGORIAS = "com.iteso.proyecto_pdm.CATEGORIAS";
 
     public static final int SOLICITUD_CALENDAR = 1;
-    public static final int SOLICITUD_TIME = 2;
+    //public static final int SOLICITUD_TIME = 2;
+
     public static final int DONACION_CALENDAR = 3;
-    public static final int DONACION_TIME = 4;
+    //public static final int DONACION_TIME = 4;
+
+
+    public static final String ACTIVITY_DONACION_ALIMENTO = "com.iteso.proyecto_pdm.ActivityDonacionAlimento";
+    public static final String ACTIVITY_SOLICITUD_ALIMENTO = "com.iteso.proyecto_pdm.Activity_Solicitud_Alimento";
 
     public static final String UID = "UID";
     public static final String USUARIO_TOKEN = "usuario_token";
@@ -23,4 +28,7 @@ public class Constants {
     public static final String REGISTROS = "registros/";
 
     public static  int count = 0;
+
+    public static boolean DONACION_ALIMENTO = false;
+    public static boolean SOLICITUD_ALIMENTO = false;
 }

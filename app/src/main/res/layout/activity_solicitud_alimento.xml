@@ -86,7 +86,7 @@
     </LinearLayout>
 
 
-    <EditText
+    <!--<EditText
         android:id="@+id/activity_solicitud_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -94,6 +94,7 @@
         android:textColor="@color/mainBlack"
         android:gravity="top"
         android:paddingTop="54dp"/>
+        -->
 
     <RelativeLayout
         android:layout_width="fill_parent"

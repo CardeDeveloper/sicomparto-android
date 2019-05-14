@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -74,9 +75,18 @@ public class Activity_Categorias extends AppCompatActivity {
 
                 editor.apply();
 
-                Intent intent = new Intent(Activity_Categorias.this, Activity_Solicitud_Alimento.class);
-                startActivity(intent);
-                finish();
+                if(Constants.SOLICITUD_ALIMENTO) {
+                    Intent intent = new Intent(Activity_Categorias.this, Activity_Solicitud_Alimento.class);
+                    Constants.SOLICITUD_ALIMENTO = false;
+                    startActivity(intent);
+                }
+                if(Constants.DONACION_ALIMENTO) {
+                    Intent intent = new Intent(Activity_Categorias.this, ActivityDonacionAlimento.class);
+                    Constants.SOLICITUD_ALIMENTO = false;
+                    startActivity(intent);
+                }
+                //setResult(RESULT_OK, intent);
+                //finish();
             }
         });
 
@@ -86,6 +96,8 @@ public class Activity_Categorias extends AppCompatActivity {
         boolean checked = ((CheckBox) v).isChecked();
 
         Map<String, Object> categories = new HashMap<>();
+
+        String path = "";
 
         //TODO: save in firebase
         switch (v.getId()){
@@ -220,11 +232,19 @@ public class Activity_Categorias extends AppCompatActivity {
 
         }
 
-        String path = Constants.REGISTROS + Constants.count;
+        if(Constants.DONACION_ALIMENTO) {
+            path = Constants.REGISTROS + Constants.count;
+            DocumentReference documentReference = FirebaseFirestore.getInstance().document(path);
+            documentReference.update(categories);
+        }
+        else if(Constants.SOLICITUD_ALIMENTO){
+            SharedPreferences sPreferences = getSharedPreferences(Constants.MAIN_PACKAGE, MODE_PRIVATE);
+            String document = sPreferences.getString(Constants.TOKEN_PREFERENCE, null);
+            path = Constants.USUARIOS + document + "/" + Constants.REGISTROS + Constants.count;
+            DocumentReference documentReference = FirebaseFirestore.getInstance().document(path);
+            documentReference.update(categories);
+        }
 
-        DocumentReference documentReference = FirebaseFirestore.getInstance().document(path);
-
-        documentReference.update(categories);
     }
 
 }

@@ -74,7 +74,6 @@ public class NewDonationActivity extends AppCompatActivity {
                     }
                 });
 
-                //TODO: save in firebase
             }
             else{
                 //TODO: activityTime
@@ -91,11 +90,11 @@ public class NewDonationActivity extends AppCompatActivity {
                 intent = new Intent(this, ActivityCalendar.class);
                 startActivityForResult(intent, Constants.DONACION_CALENDAR);
                 break;
-            case R.id.activity_donacion_time:
+            /*case R.id.activity_donacion_time:
                 //TODO:ActivityTime
                 intent = new Intent(this, ActivityCalendar.class);
                 startActivityForResult(intent, Constants.DONACION_TIME);
-                break;
+                break;*/
         }
     }
 }

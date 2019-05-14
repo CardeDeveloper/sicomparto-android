@@ -48,7 +48,6 @@ public class ActivityCalendar extends AppCompatActivity {
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
-                //TODO: save the date in a map and store it into firebase
 
                 Intent intent = getIntent();
 
